@@ -350,7 +350,7 @@ int makelist(int iflag)
 			nbytes += (long) llength(lp) + 1L;
 			lp = lforw(lp);
 		}
-		ltoa(b, 7, nbytes);	/* 6 digit buffer size. */
+		em_ltoa(b, 7, nbytes);	/* 6 digit buffer size. */
 		cp2 = &b[0];
 		while ((c = *cp2++) != 0)
 			*cp1++ = c;
@@ -375,7 +375,7 @@ int makelist(int iflag)
 	return TRUE;		/* All done             */
 }
 
-void ltoa(char *buf, int width, long num)
+void em_ltoa(char *buf, int width, long num)
 {
 	buf[width] = 0;		/* End of string.       */
 	while (num >= 10) {	/* Conditional digits.  */

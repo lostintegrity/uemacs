@@ -564,7 +564,7 @@ int dobuf(struct buffer *bp)
 			strcat(outline, ":");
 
 			/* debug if levels */
-			strcat(outline, itoa(execlevel));
+			strcat(outline, em_itoa(execlevel));
 			strcat(outline, ":");
 
 			/* and lastly the line */
